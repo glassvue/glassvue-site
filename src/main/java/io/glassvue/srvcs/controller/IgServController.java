@@ -8,13 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class IgServController {
 
-  @GetMapping("/oidc-principal")
-  public OidcUser getOidcUserPrincipal(@AuthenticationPrincipal OidcUser principal) {
-    return principal;
-  }
+//  @GetMapping("/oidc-principal")
+//  public OidcUser getOidcUserPrincipal(@AuthenticationPrincipal OidcUser principal) {
+//    return principal;
+//  }
 
-  @GetMapping("/login")
-  String login() {
-    return "login";
-  }
 }
