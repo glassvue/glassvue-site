@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>GlassVue - Contact US</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Free HTML5 Website Template by gettemplates.co" name="description"/>
+    <meta content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive"
+          name="keywords"/>
+    <meta content="gettemplates.co" name="author"/>
+
+    <!-- Facebook and Twitter integration -->
+    <meta content="" property="og:title"/>
+    <meta content="" property="og:image"/>
+    <meta content="" property="og:url"/>
+    <meta content="" property="og:site_name"/>
+    <meta content="" property="og:description"/>
+    <meta content="" name="twitter:title"/>
+    <meta content="" name="twitter:image"/>
+    <meta content="" name="twitter:url"/>
+    <meta content="" name="twitter:card"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link href="static/css/animate.css" rel="stylesheet">
+    <!-- Icomoon Icon Fonts-->
+    <link href="static/css/icomoon.css" rel="stylesheet">
+    <!-- Themify Icons-->
+    <link href="static/css/themify-icons.css" rel="stylesheet">
+    <!-- Bootstrap  -->
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Magnific Popup -->
+    <link href="static/css/magnific-popup.css" rel="stylesheet">
+
+    <!-- Owl Carousel  -->
+    <link href="static/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/css/owl.theme.default.min.css" rel="stylesheet">
+
+    <!-- Theme style  -->
+    <link href="static/css/style.css" rel="stylesheet">
+
+    <!-- Modernizr JS -->
+    <script src="static/js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="static/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+    <nav class="gtco-nav" role="navigation">
+        <div class="gtco-container">
+            <div class="col-sm-4">
+                <a href="index.html"><img src="static/images/glassvuelogo.png" alt="LOGO" style="height: 80px; width: 300px;"></img></a>
+            </div>
+            <div class="row col-sm-8">
+                <div class="col-md-12 text-right gtco-contact">
+                    <ul class="">
+                        <li><a href="https://www.linkedin.com/company/glassvue/" target="_blank"><i
+                                class="icon-linkedin"></i></a></li>
+                        <li><a href="https://www.facebook.com/SNS-It-Services-388343791596037/" target="_blank"><i
+                                class="ti-facebook"></i></a></li>
+                        <li><a href="mailto:info@glassvue.net" target="_blank"><i class="icon-mail2"></i></a></li>
+                        <li><a href="https://twitter.com/glassvue" target="_blank"><i class="ti-twitter-alt"></i> </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row col-sm-8">
+                <div class="col-xs-12 text-right menu-1">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="has-dropdown">
+                            <a href="services.html">Services</a>
+                            <ul class="dropdown" style="width:245px;">
+                                <li><a href="services.html#webappdevelopment">Web Application Development</a></li>
+                                <li><a href="services.html#mobileappdevelopment">Mobile App Development</a></li>
+                                <li><a href="services.html#websitedevelopment">Website Development</a></li>
+                                <li><a href="services.html#itstaffing">IT Staffing</a></li>
+                                <li><a href="services.html#ittraining">IT Training</a></li>
+                                <li><a href="services.html#cloudservices">Cloud Services</a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <header class="gtco-cover gtco-cover-xs" id="gtco-header" role="banner"
+            style="background-image:url(static/images/getintouch1.jpg);">
+        <div class="overlay"></div>
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <div class="display-t">
+                        <div class="display-tc">
+                            <h1 class="animate-box" data-animate-effect="fadeInUp">Get In Touch</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="gtco-section">
+        <div class="gtco-container">
+            <div class="row row-pb-md">
+                <div class="col-md-6 animate-box">
+                    <h3>Get In Touch</h3>
+                    <form method="post" name="userForm" ng-app="postserviceApp" ng-controller="postserviceCtrl"
+                          novalidate>
+                        <div class="row form-group">
+                            <div class="col-md-12"
+                                 ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                                <label class="sr-only" for="name">Name</label>
+                                <input class="form-control" id="name" name="name" ng-model="name"
+                                       placeholder="Your name"
+                                       required type="text">
+                                <p class="help-block" ng-show="userForm.name.$invalid && !userForm.name.$pristine">Your
+                                    name is required.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12"
+                                 ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                                <label class="sr-only" for="email">Email</label>
+                                <input class="form-control" id="email" name="email" ng-model="email"
+                                       placeholder="Your email address" required type="email">
+                                <p class="help-block" ng-show="userForm.email.$invalid && !userForm.email.$pristine">
+                                    Enter a valid email.</p>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12"
+                                 ng-class="{ 'has-error' : userForm.subject.$invalid && !userForm.subject.$pristine }">
+                                <label class="sr-only" for="subject">Subject</label>
+                                <input class="form-control" id="subject" name="subject" ng-model="subject"
+                                       placeholder="Must enter subject of this message" required type="text">
+                                <p class="help-block"
+                                   ng-show="userForm.subject.$invalid && !userForm.subject.$pristine">Subject is
+                                    required.</p>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12"
+                                 ng-class="{ 'has-error' : userForm.message.$invalid && !userForm.message.$pristine }">
+                                <label class="sr-only" for="message">Message</label>
+                                <textarea class="form-control" cols="30" id="message" name="message" ng-maxlength="800"
+                                          ng-minlength="1"
+                                          ng-model="message"
+                                          placeholder="Must enter message and it won't exceed 800 characters" required
+                                          rows="10"></textarea>
+                                <p class="help-block" ng-show="userForm.message.$error.minlength">Username is too
+                                    short.</p>
+                                <p class="help-block" ng-show="userForm.message.$error.maxlength">Username is too
+                                    long.</p>
+                            </div>
+                        </div>
+                        <div class="form-group" style="text-align: center;">
+                            <button class="btn btn-primary btn-lg" id="submit"
+                                    ng-click="postdata(name, email, message, subject)"
+                                    ng-disabled="userForm.$invalid" type="submit">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-5 col-md-push-1 animate-box">
+
+                    <div class="gtco-contact-info">
+                        <h3>Contact Information</h3>
+                        <ul>
+                            <li class="address"> Rio Robles E, San Jose, CA</li>
+                            <li class="phone"><a href="tel://14084900707"> +1 408 490 0707 </a></li>
+                            <li class="email"><a href="mailto:info@glassvue.net"> info@glassvue.net </a></li>
+                            <li class="url"><a href="http://www.glassvue.net"> www.glassvue.net </a></li>
+                        </ul>
+                    </div>
+                    <iframe allowfullscreen
+                            frameborder="0"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAEzvufpRdYBNtiDMjaml4yWaFHmiKU8wE&q=San+jose,CA&attribution_source=Google+Maps+Embed+API&attribution_ios_deep_link_id=comgooglemaps://?daddr=Fairmont+Empress,+Victoria,+BC"
+                            style="float: right; width: 100%; Height: 300px;"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer id="gtco-footer" role="contentinfo">
+    <div class="gtco-container">
+        <div class="row row-p	b-md">
+
+            <div class="col-md-4">
+                <div class="gtco-widget">
+                    <h3>About Us</h3>
+                    <p style="text-align:justify;">GlassVue is team of Highly Motivated Experienced Software Developer
+                        sharing common Goal - 100% Client Satisfaction with cutting edge latest tools and technologies.
+                        We do believe in transformative power of new tools and technologies. Our commitment is
+                        innovation and excellence. We make software for businesses that want to be more profitable,
+                        efficient and Agile.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-md-push-1">
+                <div class="gtco-widget">
+                    <h3>Links</h3>
+                    <ul class="gtco-footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="mailto:careers@glassvue.net">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gtco-widget">
+                    <h3>Get In Touch</h3>
+                    <ul class="gtco-quick-contact">
+                        <li><i class="icon-phone"></i><a href="tel://14084900707"> +1 408 490 0707 </a></li>
+                        <li><i class="icon-mail2"></i><a href="mailto:info@glassvue.net"> info@glassvue.net</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row copyright">
+            <div class="col-md-12">
+                <p class="pull-left">
+                    <small class="block">&copy;2023 GlassVue. All Rights Reserved.</small>
+                </p>
+                <p class="pull-right">
+                <ul class="gtco-social-icons pull-right">
+                    <li><a href="https://www.linkedin.com/company/glassvue/" target="_blank"><i
+                            class="icon-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/SNS-It-Services-388343791596037/" target="_blank"><i
+                            class="ti-facebook"></i></a></li>
+                    <li><a href="mailto:info@glassvue.net" target="_blank"><i class="icon-mail2"></i></a></li>
+                    <li><a href="https://twitter.com/glassvue" target="_blank"><i class="ti-twitter-alt"></i> </a></li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<div class="gototop js-top">
+    <a class="js-gotop" href="#"><i class="icon-arrow-up"></i></a>
+</div>
+
+<!-- jQuery -->
+<script src="static/js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="static/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="static/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="static/js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="static/js/owl.carousel.min.js"></script>
+<!-- countTo -->
+<script src="static/js/jquery.countTo.js"></script>
+<!-- Magnific Popup -->
+<script src="static/js/jquery.magnific-popup.min.js"></script>
+<script src="static/js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="static/js/main.js"></script>
+
+<!-- contactus.js -->
+<script src="static/js/contactus.js"></script>
+</body>
+</html>
+
