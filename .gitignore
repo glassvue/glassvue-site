@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 # Compiled class file
 *.class
 
@@ -7,6 +6,10 @@
 
 # BlueJ files
 *.ctxt
+
+#Node files
+**/node_modules/
+**/build/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -36,4 +39,4 @@ target/
 *.pem
 *.iml
 target/
->>>>>>> Stashed changes
+

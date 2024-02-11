@@ -3,7 +3,8 @@ server:
 
 spring:
   mvc:
-    static-path-pattern: /static/**
+    pathmatch:
+      matching-strategy: ant_path_matcher
   web:
     resources:
       add-mappings: true
