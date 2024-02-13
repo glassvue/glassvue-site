@@ -1,0 +1,93 @@
+Too important to run docker locally docker container run -d \
+  -p 3000:3000 \
+  -v /var/run/docker.sock:/var/run/docker.sock glassvue/reactapp:2.0.3
+
+________________________________
+docker build . -t glassvue/gv-site:0.0.1
+________________________________
+docker image ls
+
+
+docker push glassvue/gv-site:0.0.1	
+docker pull glassvue/gv-site:0.0.1
+
+docker container ls -a
+docker image ls
+
+ docker stop <Container_id>
+
+
+docker image ls
+sudo docker container run -d -p 80:8080  -v /var/run/docker.sock:/var/run/docker.sock glassvue/gv-site:0.0.1
+to run below build command
+mvn clean package dockerfile:push
+
+
+sudo docker stop 0574484f4eff --force
+________________________________
+npm run dev
+Local:   http://localhost:5173/
+
+For Spring-boot only but not needed nowdocker run -p 80:3000 --name glassvue glassvue/reactapp:2.0.3
+________________________________
+
+docker attach <container_id>
+
+This will open a new terminal window that is connected to the container.You can then use this terminal window to run commands and view the logs of the container.
+
+Using thedocker logscommand
+
+docker logs <container_id> --tail 10
+
+________________________________
+Error:Error response from daemon: driver failed programming external connectivity on endpoint confident_heyrovsky (4d51b9492ecaa912a8b6b09f19788b81c75e7b40eaf098675464b4034b20d642): Error starting userland proxy: listen tcp4 0.0.0.0:80: bind: address already in use
+Error: failed to start containers: f32625db5bf
+
+Solution:
+sudo lsof -i :80
+sudo service apache2 stop
+________________________________
+Error:
+Error response from daemon: cannot stop container: determined_keldysh: permission denied
+
+Solution:
+sudo systemctl restart docker.socket docker.service________________________________
+
+
+____________________________________________________________________________________________________________
+
+JENKINS —-https://jenkins.io/doc/book/installing/linux/
+____________________________________________________________________________________________________________
+
+INSTALL:
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo dnf upgrade
+
+# Add required dependencies for the jenkins package
+sudo dnf install fontconfig java-17-openjdk
+sudo dnf install jenkins
+sudo systemctl daemon-reload
+
+
+
+Start:
+sudo systemctl enable jenkins
+
+sudo systemctl start jenkins
+
+sudo systemctl status jenkins
+
+Unlock Password:cd22a3948a2d475dbe5cc45f305bc704
+
+____________________________________________________________________________________________________________
+
+Clean up Jenkins
+ubuntu@ip-172-31-14-241:/var/lib/jenkins/workspace$ sudo rm -rf deploy-glassvue-site@tmp
+
+
+* Configuration file:The default location is/etc/default/jenkins.
+* Files:/var/lib/jenkinsis typically the location.
+* Logs:/var/log/jenkinsis the location.
+____________________________________________________________________________________________________________
